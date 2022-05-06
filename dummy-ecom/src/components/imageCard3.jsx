@@ -1,8 +1,8 @@
 import React from "react";
-import Image from '../images/london-retro-reese-glasses-tortoise-grey-front.jpg'
+import Image from '../images/whitley-glasses-black-crystal-front.jpg'
 import AddToCart from "./addToCart";
 
-const ImageCard1 = () => {
+const ImageCard3 = () => {
     return (
         <div class="card">
             <img src={Image} class="card-img-top" alt="..."/>
@@ -15,4 +15,4 @@ const ImageCard1 = () => {
     )
 }
 
-export default ImageCard1
+export default ImageCard3
