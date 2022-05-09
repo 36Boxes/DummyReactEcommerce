@@ -24,7 +24,9 @@ function Cart () {
             <br/>
             <br/>
             <div className="container">
-                <CartTable/>
+                <Card>
+                    <CartTable/>
+                </Card>
             </div>
             <br/>
             <Row>

@@ -1,21 +1,41 @@
 import React from "react";
 import { useCookies } from 'react-cookie';
 
-function AddToCart () {
+function AddToCart (props) {
 
     const [cookies, setCookie, removeCookie] = useCookies(['cart']);
 
     const addToCart = () => {
-        var existing = cookies.cart
-        console.log(cookies)
 
-        const exit = parseInt(existing) + 1
-
-        setCookie('cart', exit)
 
         if (cookies.cart === undefined){
-            setCookie('cart', 1)
+            setCookie("cart", [])
         }
+
+        var cart = cookies.cart
+        var updateQuantity = false
+
+        // Loop through array to find product with existitng name and add 1 to quantity
+
+        for( let product in cart){
+            if (cart[product].name === props.props.name){
+                cart[product].quantity += 1
+
+                // Update flag to indicate this is a quantity update not a new product
+
+                updateQuantity = true
+            }
+        }
+
+        // Set the new cart in cookies
+
+        if (updateQuantity === true){
+            setCookie("cart", cart)
+        } else {
+            cart.push({name : props.props.name, price : props.props.price, quantity : 1})
+            setCookie("cart", cart)
+        }
+
 
         console.log(cookies)
     }

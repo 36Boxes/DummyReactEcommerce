@@ -20,26 +20,26 @@ function Home () {
         <br/>
         <div className='row'>
             <div className='col'>
-                <ImageCard1/>
+                <ImageCard1 props={{name : "Glasses 1", price : "£25", id : 1}}/>
             </div>
             <div className='col'>
-                <ImageCard2/>
+                <ImageCard2 props={{name : "Glasses 2", price : "£45", id : 2}}/>
             </div>
             <div className='col'>
-                <ImageCard3/>
+                <ImageCard3 props={{name : "Glasses 3", price : "£50", id : 3}}/>
             </div>
         </div>
         <br/>
         <br/>
         <div className='row'>
             <div className='col'>
-                <ImageCard1/>
+                <ImageCard1 props={{name : "Glasses 4", price : "£5", id : 4}}/>
             </div>
             <div className='col'>
-                <ImageCard2/>
+                <ImageCard2 props={{name : "Glasses 5", price : "£45", id : 5}}/>
             </div>
             <div className='col'>
-                <ImageCard3/>
+                <ImageCard3 props={{name : "Glasses 6", price : "£500", id : 6}}/>
             </div>
         </div>
         </React.Fragment>
